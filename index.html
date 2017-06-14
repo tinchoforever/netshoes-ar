@@ -6,14 +6,20 @@
   <title>Netshoes AR Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-  
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>  
   <!-- Demo CSS -->
   <link rel="stylesheet" href="/bower_components/flexslider/flexslider.css" type="text/css" media="screen" />
   <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="loading">
 
-<video></video>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded artoolkit='sourceType: webcam;'>
+    <a-box position='0 0 0.5' material='opacity: 0.5;'></a-box>
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+</body>
   <div id="main" role="main">
       <section class="slider">
         <div class="flexslider">
@@ -55,39 +61,7 @@
       });
     });
 
-    $(function()
-{
-  var video = $('body > video')[0];
-  
-  navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-  
-  navigator.getMedia({ video: !0, audio: !1 }, function(stream)
-  {
-    if(navigator.mozGetUserMedia)
-      video.mozSrcObject = stream;
-    else
-    {
-      var vu = window.URL || window.webkitURL;
-      video.src = vu.createObjectURL(stream);
-    }
-    video.play();
-  }, function(error)
-  {
-    if(window.console)
-      console.error(error);
-  });
-  
-  video.addEventListener('canplay', function(ev)
-  {
-    if(!streaming)
-    {
-      height = video.videoHeight / (video.videoWidth / width);
-      video.setAttribute('width', width);
-      video.setAttribute('height', height);
-      streaming = !0;
-    }
-  }, !1);
-});
+   
   </script>
 
 </body>

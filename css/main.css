@@ -2,6 +2,13 @@
     margin: 0 0 60px;
     background: transparent;
 }
+
+.main{
+	   position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 video
 {
   width: 100%;
