@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta content="charset=utf-8">
+  <title>Netshoes AR Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>  
+  <!-- Demo CSS -->
+  <link href="css/ns.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/bower_components/flexslider/flexslider.css" type="text/css" media="screen" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded artoolkit='sourceType: webcam;'>
+    <a-box position='0 0 0.5' material='opacity: 0.5;'></a-box>
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+</body>
+ <div class="header-wrapper search-wrapper">
+    <div class="holder-logo-and-search">
+      <div class="site-logo-holder">
+        <a class="site-logo" href="/">
+          Netshoes. Te conecta con el deporte.
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="main" role="main">
+   
+      <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="images/shoe1.png" />
+            </li>
+            <li>
+              <img src="images/shoe2.png" />
+            </li>
+            <li>
+              <img src="images/shoe3.png" />
+            </li>
+            <li>
+              <img src="images/shoe4.png" />
+            </li>
+          </ul>
+        </div>
+      </section>
+        
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="/bower_components/flexslider/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        touch: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+
+   
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+.ns-countdown {
+  position: relative;
+  box-sizing: border-box;
+  font-family: "trebuchet ms";
+}
+
+.ns-countdown .ns-header .loading:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  background-size: 40px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://static1.netshoes.net/resources/ns-countdown/loading_spinner.gif");
+}
+
+.ns-countdown .ns-header {
+  position: relative;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.ns-countdown .ns-header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.ns-countdown .ns-header .box-title {
+  float: left;
+  width: 50%;
+}
+
+.ns-countdown .ns-header .title {
+  margin: 0;
+  padding: 0;
+  color: #363636;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "netshoes_displaybold";
+}
+
+.ns-countdown .ns-header .subtitle {
+  margin: 0;
+  padding: 0;
+  color: #686868;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.ns-countdown .ns-header .mod-countdown {
+  width: 50%;
+  float: right;
+  text-align: center;
+}
+
+.ns-countdown .ns-header .mod-countdown::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.ns-countdown .ns-header .vanilla-countdown-numbers,
+.ns-countdown .ns-header .vanilla-countdown-texts {
+  display: block;
+  vertical-align: top;
+}
+
+.ns-countdown .ns-header .vanilla-countdown-numbers span,
+.ns-countdown .ns-header .vanilla-countdown-texts span {
+  float: left;
+  vertical-align: top;
+  width: 31.33%;
+}
+
+.ns-countdown .ns-header .vanilla-countdown-numbers {
+  color: #363636;
+  font-size: 22px;
+  font-family: "netshoes_displaybold";
+}
+
+.ns-countdown .ns-header .vanilla-countdown-numbers .dot {
+  width: 1%;
+}
+
+.ns-countdown .ns-header .vanilla-countdown-numbers .dot:before {
+  content: ":";
+  color: #a5a5a5;
+}
+
+.ns-countdown .ns-header .vanilla-countdown-texts {
+  display: block;
+  color: #a5a5a5;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.ns-countdown .product-suggestion {
+  padding: 10px;
+  background-color: #FFF;
+}
+
+.ns-countdown .product-suggestion h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-family: "trebuchet ms";
+}
+
+.ns-countdown .list-item {
+  width: 100%;
+  display: block;
+}
+
+.ns-countdown .product-list-suggestion {
+  padding: 10px;
+}
+
+.ns-countdown .product-list-suggestion::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.ns-countdown .box-image,
+.ns-countdown .box-content {
+  width: 50%;
+  float: left;
+}
+
+.ns-countdown .box-image {
+  height: 160px;
+  text-align: center;
+}
+
+.ns-countdown .box-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+.ns-countdown .box-content {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.ns-countdown h6 {
+  font-family: TrebuchetMS;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #262626;
+}
+
+.ns-countdown .box-price {
+  height: 43px;
+  padding: 14px 0;
+}
+
+.ns-countdown .box-price .old-price,
+.ns-countdown .box-price .price {
+  display: block;
+}
+
+.ns-countdown .box-price .old-price {
+  color: #8c8c8c;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.ns-countdown .box-price .price {
+  color: #02b3e0;
+  font-size: 22px;
+  font-family: "netshoes_displaybold";
+}
+
+.ns-countdown .box-price .price strong {
+  font-size: 24px;
+}
+
+.ns-countdown .button {
+  position: relative;
+  color: #342b00;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #f5c800 !important;
+  padding: 8px 30px 8px 14px;
+  font-family: "netshoes_displaybold";
+}
+
+.ns-countdown .button:before {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  margin-top: -5px;
+  background-image: url("../../src/images/icon-seta-preta.svg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1305px) {
+  .ns-countdown .ns-header {
+    padding: 10px;
+  }
+  .ns-countdown .ns-header .title {
+    font-size: 15px;
+  }
+  .ns-countdown .ns-header .subtitle {
+    font-size: 12px;
+  }
+  .ns-countdown .ns-header .vanilla-countdown-numbers {
+    vertical-align: top;
+    font-size: 17px;
+  }
+  .ns-countdown .ns-header .vanilla-countdown-texts {
+    vertical-align: top;
+    font-size: 9px;
+  }
+  .ns-countdown .product-list-suggestion {
+    padding: 0;
+  }
+  .ns-countdown .product-list-suggestion h6 {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "trebuchet ms";
+  }
+  .ns-countdown .box-image {
+    width: 30%;
+    height: 102px;
+  }
+  .ns-countdown .box-image img {
+    width: 100%;
+  }
+  .ns-countdown .box-content {
+    width: 70%;
+  }
+  .ns-countdown .box-price {
+    height: 32px;
+    padding: 6px 0;
+  }
+  .ns-countdown .box-price .old-price {
+    font-size: 11px;
+  }
+  .ns-countdown .box-price .price {
+    font-size: 15px;
+  }
+  .ns-countdown .button {
+    font-size: 12px;
+    padding: 6px 30px 6px 14px;
+  }
+}
+
+.box-countdown.mobile {
+  padding: 5px;
+  background-color: #F8C42D;
+}
+
+.box-countdown.mobile .ns-countdown .ns-header {
+  padding: 5px;
+  background-color: #F8C42D;
+}
+
+.box-countdown.mobile .ns-countdown .ns-header:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #F8C42D;
+  display: inline-block;
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: rotate(135deg);
+  margin-left: -10px;
+}
+
+.box-countdown.mobile .ns-countdown .ns-header .title {
+  color: #050505;
+  font-size: 15px;
+}
+
+.box-countdown.mobile .ns-countdown .ns-header .subtitle {
+  color: #5e4804;
+  font-size: 14px;
+}
+
+.box-countdown.mobile .ns-countdown .ns-header .vanilla-countdown-numbers {
+  font-size: 20px;
+}
+
+.box-countdown.mobile .ns-countdown .ns-header .vanilla-countdown-texts {
+  font-size: 10px;
+}
+
+.box-countdown.mobile .ns-countdown .ns-wrapper {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.box-countdown.mobile .ns-countdown .ns-wrapper .mod-countdown {
+  text-align: right;
+}
+
+.box-countdown.mobile .ns-countdown .vanilla-countdown-numbers {
+  color: #363636;
+}
+
+.box-countdown.mobile .ns-countdown .vanilla-countdown-numbers .dot:before {
+  color: #363636;
+}
+
+.box-countdown.mobile .ns-countdown .vanilla-countdown-texts {
+  color: #5e4804;
+}
+
+.box-countdown.mobile .ns-countdown .product-list-suggestion {
+  margin-bottom: 0;
+}
+
+.ns-countdown {
+  margin: -8px -8px 11px;
+}
+
+@media screen and (max-width: 1305px) {
+  .ns-countdown .ns-header .title {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .ns-countdown .ns-header .subtitle {
+    font-size: 11px;
+  }
+  .ns-countdown .ns-header .vanilla-countdown-numbers {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .ns-header {
+    background-color: #ffffff;
+    height: 55px;
+  }
+  .ns-wrapper {
+    width: 320px;
+  }
+  .ns-countdown .ns-header .title {
+    font-size: 17px !important;
+  }
+  .ns-countdown .ns-header .subtitle {
+    font-size: 14px !important;
+  }
+  .ns-countdown .ns-header .vanilla-countdown-numbers {
+    font-size: 25px !important;
+  }
+  .ns-countdown .ns-header .vanilla-countdown-texts {
+    font-size: 14px;
+  }
+  .ns-countdown {
+    margin: -8px -15px 11px;
+  }
+}
